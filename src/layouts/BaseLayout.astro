@@ -1,0 +1,139 @@
+---
+import "../styles/global.css"
+const {title = "Mi Perfil | Portafolio"} = Astro.props;
+import Header from "../components/Header.astro";
+---
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{title}</title>
+    <meta name="description"
+          content="Aprende inglés con Miss Claudia, con una metodología divertida y eficaz para niños y adolescentes."/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<!--<body class="bg-white text-gray-900 font-sans antialiased">-->
+<!--<body class="bg-blue-50 bg-[url('/public/fondo-patron.svg')] bg-repeat bg-[length:120px_120px] text-gray-800">-->
+<body class="bg-white text-gray-800 font-sans scroll-smooth">
+<Header/>
+
+    <!-- CONTENIDO -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <slot/>
+    </main>
+
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/51949493742" target="_blank"
+       class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"
+       aria-label="Chat por WhatsApp">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.165 0 16c0 2.822.736 5.585 2.133 7.997L0 32l8.29-2.152A15.941 15.941 0 0 0 16 32c8.837 0 16-7.165 16-16S24.837 0 16 0zm0 29.406c-2.557 0-5.075-.69-7.273-2.002l-.522-.308-4.924 1.277 1.318-4.797-.34-.546C2.508 20.304 1.6 18.192 1.6 16c0-7.957 6.471-14.427 14.4-14.427S30.4 8.043 30.4 16c0 7.956-6.471 14.406-14.4 14.406zm8.04-10.546l-2.633-.744a1.117 1.117 0 0 0-1.072.296l-.987 1.011a8.267 8.267 0 0 1-3.939-3.932l1.01-.99a1.117 1.117 0 0 0 .297-1.073l-.744-2.633a1.118 1.118 0 0 0-1.071-.804H11.36c-.625 0-1.133.508-1.133 1.134 0 7.412 6.018 13.431 13.431 13.431.625 0 1.134-.508 1.134-1.134v-2.358a1.12 1.12 0 0 0-.804-1.071z"/>
+        </svg>
+    </a>
+
+<!-- 🐞 BUG SVG -->
+<div id="bug" class="fixed top-0 left-0 w-10 h-10 z-[9999] pointer-events-none text-red-600 animate-pulse">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
+        <!-- Cuerpo principal -->
+        <ellipse cx="50" cy="60" rx="22" ry="30" fill="#EF4444" stroke="#1F2937" stroke-width="2" />
+
+        <!-- Línea divisoria del caparazón -->
+        <line x1="50" y1="30" x2="50" y2="90" stroke="#1F2937" stroke-width="2" />
+
+        <!-- Cabeza -->
+        <circle cx="50" cy="28" r="10" fill="#1F2937" />
+
+        <!-- Ojos -->
+        <circle cx="46" cy="26" r="2" fill="#fff" />
+        <circle cx="54" cy="26" r="2" fill="#fff" />
+
+        <!-- Antenas -->
+        <line x1="45" y1="20" x2="40" y2="10" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+        <line x1="55" y1="20" x2="60" y2="10" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+
+        <!-- Patas izquierda -->
+        <line x1="28" y1="40" x2="12" y2="30" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+        <line x1="28" y1="60" x2="10" y2="60" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+        <line x1="28" y1="80" x2="12" y2="90" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+
+        <!-- Patas derecha -->
+        <line x1="72" y1="40" x2="88" y2="30" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+        <line x1="72" y1="60" x2="90" y2="60" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+        <line x1="72" y1="80" x2="88" y2="90" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+    </svg>
+
+
+</div>
+<!-- 🧠 Script de movimiento del bug -->
+<!--<script is:inline>
+    const bug = document.getElementById('bug');
+
+    function moveBug() {
+        const x = Math.random() * (window.innerWidth - 50);
+        const y = Math.random() * (window.innerHeight - 50);
+        bug.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random() * 360}deg)`;
+    }
+
+    // Establecer transición
+    bug.style.transition = 'transform 4s ease-in-out';
+
+    // Posicionar el bug inicialmente sin animación
+    requestAnimationFrame(() => {
+        moveBug(); // primera posición instantánea
+        setInterval(moveBug, 5000); // luego cada 5 segundos
+    });
+</script>-->
+
+<script is:inline>
+    const bug = document.getElementById('bug');
+
+    function moveBug() {
+        const x = Math.random() * (window.innerWidth - 50);
+        const y = Math.random() * (window.innerHeight - 50);
+        bug.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random() * 360}deg)`;
+    }
+
+    // Transición suave
+    bug.style.transition = 'transform 2.5s ease-in-out';
+
+    // Posición inicial
+    requestAnimationFrame(() => {
+        moveBug();
+        setInterval(moveBug, 6000);
+    });
+
+    // Reacciona al acercarse el cursor
+    document.addEventListener('mousemove', (e) => {
+        const rect = bug.getBoundingClientRect();
+        const dist = Math.hypot(
+            rect.left + rect.width / 2 - e.clientX,
+            rect.top + rect.height / 2 - e.clientY
+        );
+        if (dist < 100) {
+            moveBug();
+        }
+    });
+
+    // 💥 Explosión al hacer clic
+    bug.addEventListener('click', () => {
+        bug.style.transition = 'transform 0.2s ease-in-out, opacity 0.4s ease-out';
+        bug.style.transform += ' scale(2) rotate(720deg)';
+        bug.style.opacity = '0';
+
+        setTimeout(() => {
+            bug.remove();
+        }, 400); // lo remueve después de la explosión
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
