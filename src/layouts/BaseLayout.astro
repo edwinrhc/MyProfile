@@ -2,6 +2,9 @@
 import "../styles/global.css"
 const {title = "Mi Perfil | Portafolio"} = Astro.props;
 import Header from "../components/Header.astro";
+import Footer from "../pages/footer.astro";
+import FooterComponent from "../components/FooterComponent.astro";
+
 ---
 <html lang="es">
 <head>
@@ -24,6 +27,9 @@ import Header from "../components/Header.astro";
         <slot/>
     </main>
 
+
+
+ <FooterComponent />
 
     <!-- WHATSAPP BUTTON -->
     <a href="https://wa.me/51949493742" target="_blank"

@@ -1,0 +1,34 @@
+---
+
+---
+<footer class="bg-gray-100 py-8 text-center text-sm text-gray-600">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+
+        <!-- Redes sociales -->
+        <div class="flex justify-center gap-4 text-gray-500 text-xl">
+            <a href="https://github.com/edwinrhc" target="_blank" class="hover:text-gray-800 transition">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/edwinrhc" target="_blank" class="hover:text-gray-800 transition">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:edwinrhc@gmail.com" class="hover:text-gray-800 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Derechos -->
+        <p>&copy; <span id="year"></span> <span class="font-semibold text-blue-600">ErhC</span> | Todos los derechos reservados.</p>
+
+        <!-- Firma -->
+        <p class="text-xs text-gray-400">
+            Desarrollado con 💻 por <span class="font-semibold text-blue-600">Edwin Huamanttupa</span>
+        </p>
+    </div>
+</footer>
+
+<!-- Año dinámico -->
+<script is:inline>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
