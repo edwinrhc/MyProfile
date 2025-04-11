@@ -2,7 +2,6 @@
 import "../styles/global.css"
 const {title = "Mi Perfil | Portafolio"} = Astro.props;
 import Header from "../components/Header.astro";
-import Footer from "../pages/footer.astro";
 import FooterComponent from "../components/FooterComponent.astro";
 
 ---
@@ -11,6 +10,7 @@ import FooterComponent from "../components/FooterComponent.astro";
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{title}</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/favicon.svg" />
     <meta name="description"
           content="Aprende inglés con Miss Claudia, con una metodología divertida y eficaz para niños y adolescentes."/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
