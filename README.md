@@ -58,3 +58,7 @@ Puedes usar la plantilla `.gitmessage.txt` incluida en este repositorio:
 ```bash
 git config --global commit.template ".gitmessage.txt"
 git config --global core.editor "code --wait"
+git commit 
+````
+- git commit - Por defecto se abre el Vscode
+
