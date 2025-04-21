@@ -114,12 +114,6 @@
             </div>
 
 
-
-
-
-
-
-
         </div>
     </div>
 </section>
@@ -127,28 +121,4 @@
 
 
 
-<!--<script is:inline>
-    const username = "edwinrhc";
-    const container = document.getElementById("proyectos-lista");
-
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
-        .then(res => res.json())
-        .then(data => {
-            data.forEach(repo => {
-                const card = document.createElement("div");
-                card.className = "bg-white p-6 rounded-xl shadow hover:shadow-lg transition";
-
-                card.innerHTML = `
-          <h3 class="text-xl font-semibold mb-2">${repo.name}</h3>
-          <p class="text-sm text-gray-600 mb-4">${repo.description || "Sin descripción"}</p>
-          <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer"
-             class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm">
-            Ver en GitHub
-          </a>
-        `;
-
-                container.appendChild(card);
-            });
-        });
-</script>-->
 
