@@ -46,3 +46,15 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+
+## 📝 Plantilla de commits
+
+Este proyecto utiliza el estándar [Conventional Commits](https://www.conventionalcommits.org/es/v1.0.0/) para mantener un historial limpio y comprensible.
+
+Puedes usar la plantilla `.gitmessage.txt` incluida en este repositorio:
+
+```bash
+git config --global commit.template ".gitmessage.txt"
+git config --global core.editor "code --wait"
