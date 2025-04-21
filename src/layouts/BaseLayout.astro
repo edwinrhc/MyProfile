@@ -45,37 +45,27 @@ import FooterComponent from "../components/FooterComponent.astro";
 
 <!-- 🐞 BUG SVG -->
 <div id="bug" class="fixed top-0 left-0 w-10 h-10 z-[9999] pointer-events-none text-red-600 animate-pulse">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
-        <!-- Cuerpo principal -->
-        <ellipse cx="50" cy="60" rx="22" ry="30" fill="#EF4444" stroke="#1F2937" stroke-width="2" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
+<!-- Cuerpo rojo -->
+<ellipse cx="50" cy="50" rx="20" ry="30" fill="#DC2626" />
 
-        <!-- Línea divisoria del caparazón -->
-        <line x1="50" y1="30" x2="50" y2="90" stroke="#1F2937" stroke-width="2" />
+<!-- Cabeza negra -->
+<circle cx="50" cy="20" r="10" fill="#1F2937" />
 
-        <!-- Cabeza -->
-        <circle cx="50" cy="28" r="10" fill="#1F2937" />
+<!-- Patas laterales -->
+<line x1="30" y1="40" x2="10" y2="30" stroke="#1F2937" stroke-width="4" />
+<line x1="30" y1="50" x2="10" y2="50" stroke="#1F2937" stroke-width="4" />
+<line x1="30" y1="60" x2="10" y2="70" stroke="#1F2937" stroke-width="4" />
+<line x1="70" y1="40" x2="90" y2="30" stroke="#1F2937" stroke-width="4" />
+<line x1="70" y1="50" x2="90" y2="50" stroke="#1F2937" stroke-width="4" />
+<line x1="70" y1="60" x2="90" y2="70" stroke="#1F2937" stroke-width="4" />
 
-        <!-- Ojos -->
-        <circle cx="46" cy="26" r="2" fill="#fff" />
-        <circle cx="54" cy="26" r="2" fill="#fff" />
-
-        <!-- Antenas -->
-        <line x1="45" y1="20" x2="40" y2="10" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-        <line x1="55" y1="20" x2="60" y2="10" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-
-        <!-- Patas izquierda -->
-        <line x1="28" y1="40" x2="12" y2="30" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-        <line x1="28" y1="60" x2="10" y2="60" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-        <line x1="28" y1="80" x2="12" y2="90" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-
-        <!-- Patas derecha -->
-        <line x1="72" y1="40" x2="88" y2="30" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-        <line x1="72" y1="60" x2="90" y2="60" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-        <line x1="72" y1="80" x2="88" y2="90" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
-    </svg>
-
-
+<!-- Antenas dobladas -->
+<polyline points="45,10 42,5 36,3" fill="none" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+<polyline points="55,10 58,5 64,3" fill="none" stroke="#1F2937" stroke-width="2" stroke-linecap="round" />
+</svg>
 </div>
+
 <!-- 🧠 Script de movimiento del bug -->
 <!--<script is:inline>
     const bug = document.getElementById('bug');
