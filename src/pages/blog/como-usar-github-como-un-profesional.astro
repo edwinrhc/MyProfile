@@ -1,0 +1,237 @@
+---
+export const frontmatter = {
+    title: "🚀 Cómo usar GitHub como un profesional",
+    description: "Guía práctica para dominar GitHub: desde tus primeros commits hasta colaborar en proyectos reales con buenas prácticas.",
+    date: "2025-04-21",
+    tags: ["GitHub", "Git", "Portafolio", "Buenas prácticas"],
+    path: "/blog/como-usar-github-como-un-profesional"
+};
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="| GitHub Pro">
+    <section class="py-24  text-gray-800 px-6">
+        <div class="max-w-4xl mx-auto space-y-16">
+
+            <!-- Header -->
+            <header class="text-center">
+                <h1 class="text-4xl font-bold text-blue-800">🚀 Cómo usar GitHub como un profesional</h1>
+                <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+                    Guía práctica para dominar GitHub: desde tus primeros commits hasta colaborar en proyectos reales
+                    con buenas prácticas.
+                </p>
+            </header>
+
+            <!-- Introducción -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">🔍 ¿Por qué aprender GitHub como un
+                    profesional?</h2>
+                <p>
+                    GitHub es más que un repositorio de código. Es tu portafolio vivo, tu herramienta de colaboración y
+                    tu espacio de trabajo digital. Usarlo bien demuestra que sabes trabajar en equipo, organizar tus
+                    ideas y construir software con calidad.
+                </p>
+                <p>
+                    En este artículo te enseño cómo usar GitHub con enfoque profesional, aplicado a tus propios
+                    proyectos.
+                </p>
+            </section>
+
+            <!-- Estructura -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">✅ Buenas prácticas básicas</h2>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><strong>Inicializa tus repositorios desde cero:</strong> <code>git init</code>, <code>git remote
+                        add origin</code>, etc.
+                    </li>
+                    <li><strong>Usa una estructura clara:</strong> <code>src/</code>, <code>docs/</code>, <code>.gitignore</code>,
+                        <code>README.md</code></li>
+                    <li><strong>Haz commits descriptivos:</strong> Sigue el estándar <code>tipo(ámbito):
+                        descripción</code> (feat, fix, docs...)
+                    </li>
+                    <li><strong>Crea un README profesional:</strong> con descripción, tecnologías, instalación, autor,
+                        etc.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- README -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">📝 Cómo escribir un README profesional</h2>
+                <p>El README es la carta de presentación de tu proyecto. Aquí un ejemplo básico:</p>
+                <pre class="bg-gray-900 text-green-300 text-sm rounded-lg p-4 overflow-x-auto"><code># Nombre del Proyecto
+
+Descripción breve del proyecto.
+
+## Tecnologías usadas
+- Java
+- Spring Boot
+- Astro
+- Tailwind CSS
+
+## Instalación
+1. Clona el repositorio
+2. Ejecuta `npm install` o `mvn install`
+3. Corre el servidor local
+
+## Autor
+Edwin Huamanttupa - [@edwinrhc](https://github.com/edwinrhc)
+</code></pre>
+            </section>
+
+            <!-- Commits -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">🎯 Commits profesionales con Conventional
+                    Commits</h2>
+                <p>
+                    Utiliza etiquetas como <code>feat</code>, <code>fix</code>, <code>docs</code>, etc., para
+                    estructurar tus commits. Ejemplos:
+                </p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li><code>feat(blog): agrega artículo sobre autenticación JWT</code></li>
+                    <li><code>docs(readme): actualiza guía de instalación</code></li>
+                    <li><code>chore(git): añade plantilla de commits convencional</code></li>
+                </ul>
+            </section>
+
+            <!-- Gitmessage -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">✍️ Uso de plantilla .gitmessage.txt para commits
+                    profesionales</h2>
+                <p>
+                    Para escribir mensajes de commit consistentes, puedes crear una plantilla que te recuerde cómo usar
+                    el formato <strong>Conventional Commits</strong>. Esto te ayuda a mantener tu historial limpio y
+                    entendible, sobre todo si trabajas en equipo o tienes varios proyectos.
+                </p>
+
+                <p class="mt-2">Crea un archivo llamado <code>.gitmessage.txt</code> en la raíz de tu proyecto con el
+                    siguiente contenido:</p>
+
+                <pre class="bg-gray-900 text-green-300 text-sm rounded-lg p-4 overflow-x-auto"><code># tipo(ámbito): descripción breve
+#
+# Tipos comunes:
+# feat:     nueva funcionalidad
+# fix:      corrección de errores
+# docs:     cambios en la documentación
+# style:    cambios visuales sin lógica
+# refactor: reestructuración sin cambiar comportamiento
+# chore:    mantenimiento (dependencias, configuración)
+# test:     añadir o modificar pruebas
+
+# Ejemplo:
+# feat(blog): agrega nuevo artículo sobre uso de GitHub
+# fix(login): corrige validación de token JWT
+</code></pre>
+
+                <p class="mt-4">Luego, configúralo globalmente con los siguientes comandos:</p>
+
+                <pre class="bg-gray-900 text-green-300 text-sm rounded-lg p-4 overflow-x-auto"><code>git config --global commit.template ".gitmessage.txt"
+git config --global core.editor "code --wait"</code></pre>
+
+                <p class="mt-4">
+                    La próxima vez que hagas <code>git commit</code> sin <code>-m</code>, VS Code se abrirá
+                    automáticamente con esta plantilla precargada para que escribas un mensaje claro y profesional.
+                </p>
+
+                <p class="text-sm text-gray-500 mt-2">
+                    💡 Consejo: también puedes versionar tu <code>.gitmessage.txt</code> en tu repositorio y agregar
+                    instrucciones en el README para que otros lo usen.
+                </p>
+            </section>
+
+
+            <!-- Colaboración -->
+            <!-- Ramas y Pull Requests -->
+            <!-- Revisión de código y protección de ramas -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">🔍 Pull Requests, revisiones de código y reglas de protección de ramas</h2>
+                <p>
+                    Cuando trabajas con ramas y haces un <strong>Pull Request (PR)</strong>, estás proponiendo cambios que quieres fusionar al código principal. Aquí es donde entra el proceso de revisión, muy común en entornos profesionales.
+                </p>
+
+                <h3 class="text-lg font-semibold text-blue-600 mt-6 mb-2">🧠 Revisión de código (Code Review)</h3>
+                <p>
+                    Un PR te permite revisar los cambios línea por línea, dejar comentarios, sugerencias o marcar cosas para corregir. Puedes:
+                </p>
+
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Solicitar revisión a compañeros</li>
+                    <li>Comentar líneas de código específicas</li>
+                    <li>Solicitar cambios antes de aprobar</li>
+                    <li>Aprobar el PR si todo está correcto</li>
+                </ul>
+
+                <p class="mt-4">
+                    Incluso trabajando solo, un PR te obliga a ver tu propio código con más atención antes de hacer merge a <code>main</code>.
+                </p>
+
+                <h3 class="text-lg font-semibold text-blue-600 mt-6 mb-2">🛡️ Protección de ramas (Branch Protection Rules)</h3>
+                <p>
+                    En GitHub puedes aplicar reglas a ramas importantes como <code>main</code> para evitar errores o merges accidentales.
+                </p>
+
+                <p class="mt-2">
+                    Algunas reglas comunes que puedes configurar:
+                </p>
+
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>✅ Requerir al menos 1 aprobación de revisión antes de hacer merge</li>
+                    <li>🔒 No permitir pushes directos a <code>main</code> (solo a través de PRs)</li>
+                    <li>📦 Requerir que el código pase tests antes de merge (si usas CI)</li>
+                    <li>📁 Exigir commits firmados (para seguridad en proyectos abiertos)</li>
+                </ul>
+
+                <p class="mt-4">
+                    Para activar estas reglas, ve al repositorio en GitHub → <strong>Settings</strong> → <strong>Branches</strong> → <strong>Add rule</strong> y selecciona la rama que deseas proteger.
+                </p>
+
+                <p class="text-sm text-gray-500 mt-4">
+                    💡 Consejo: en proyectos reales, estas reglas evitan errores en producción y mantienen un control de calidad automático.
+                </p>
+            </section>
+
+
+
+            <!-- Extras -->
+            <section>
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">🧰 Extras para subir de nivel</h2>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><strong>GitHub Pages:</strong> publica páginas estáticas directamente desde tu repo.</li>
+                    <li><strong>Actions:</strong> automatiza pruebas, despliegues y tareas repetitivas.</li>
+                    <li><strong>Insights:</strong> analiza actividad del proyecto.</li>
+                </ul>
+            </section>
+
+            <!-- Conclusión -->
+            <!-- Conclusión -->
+            <section>
+                <h2 class="text-2xl font-semibold text-green-700">✅ Conclusión: tu perfil en GitHub es tu mejor carta</h2>
+                <p>
+                    GitHub es mucho más que una herramienta para subir código. Es una plataforma donde puedes mostrar tu evolución como desarrollador, colaborar con otros, aprender mejores prácticas y mantener un historial profesional de tu trabajo.
+                </p>
+
+                <p class="mt-4">
+                    Al dominar herramientas como commits estructurados, ramas, PRs, revisiones y buenas prácticas en la organización del proyecto, estás dando pasos sólidos hacia el desarrollo profesional.
+                </p>
+
+                <p class="mt-4">
+                    Te animo a aplicar estas recomendaciones en tus propios proyectos, escribir tu documentación con cariño, y cuidar cada detalle como si ya formaras parte de un equipo real. Porque eso es lo que haces con cada línea de código: mostrar de lo que eres capaz.
+                </p>
+<!--
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8 text-center">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">👨‍💻 Mi perfil profesional en GitHub</h3>
+                    <p class="text-gray-700 mb-4">Aquí puedes encontrar mis proyectos, buenas prácticas y artículos técnicos como este:</p>
+                    <a href="https://github.com/edwinrhc" target="_blank" class="inline-block bg-blue-600 text-white font-medium px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+                        🔗 github.com/edwinrhc
+                    </a>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-6 text-center">
+                    ¿Te gustó este artículo? ¡Explora más publicaciones en mi <a href="/blog" class="text-blue-600 underline">blog técnico</a>!
+                </p>-->
+            </section>
+
+
+        </div>
+    </section>
+</BaseLayout>
